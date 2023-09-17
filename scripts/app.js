@@ -1,5 +1,5 @@
-let minute = 25;
-let seconde = 0;
+let minute = 1;
+let seconde = 5;
 
 const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
@@ -15,3 +15,14 @@ function affichage(minute, seconde) {
 }
 
 affichage(minute, seconde);
+
+function decompte() {
+    affichage(minute, seconde);
+    if (seconde == 0) {
+        minute--;
+        seconde = 59;
+    } else {
+        seconde--;
+    }
+
+}
