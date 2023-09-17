@@ -1,14 +1,24 @@
+let minuteTravail = 5;
+let secondeTravail = 0;
 let minutePause = 5;
 let secondePause = 0;
-let minute = 0;
-let seconde = 5;
+let minute = minuteTravail;
+let seconde = secondeTravail;
 let enPause = false;
+let IDInterval = 0;
 
 const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
+const boutonReinitialiser = document.getElementById("arretBouton");
 
 boutonLancer.addEventListener('click', () => {
-    setInterval(decompte, 1000);
+    IDInterval = setInterval(decompte, 1000);
+});
+
+boutonReinitialiser.addEventListener('click', () => {
+    clearInterval(IDInterval);
+    affichage(minuteTravail, secondeTravail);
+    enPause = false;
 });
 
 function affichage(minute, seconde) {
