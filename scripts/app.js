@@ -7,11 +7,13 @@ let seconde = secondeTravail;
 let enPause = false;
 let IDInterval = 0;
 let estActif = false;
+let estThemeSombre = false;
 
 const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
 const etude = document.getElementById("etude");
 const pause = document.getElementById("pause");
+const theme = document.getElementById("theme");
 
 boutonLancer.addEventListener('click', () => {
     if (!estActif) {
@@ -26,6 +28,17 @@ boutonLancer.addEventListener('click', () => {
         boutonLancer.textContent = "Link Start";
     }
 
+});
+
+theme.addEventListener('click', () => {
+    if (estThemeSombre) {
+        darkMode();
+        estThemeSombre = true;
+
+    } else {
+        lightMode();
+        estThemeSombre = false;
+    }
 });
 
 function affichage(minute, seconde) {
@@ -56,3 +69,11 @@ function decompte() {
     }
 }
 
+function darkMode() {
+    theme.innerHTML = '<img src="images/dark-mode.png" />';
+
+}
+
+function lightMode() {
+    theme.innerHTML = '<img src="images/light-mode.png" />';
+}
