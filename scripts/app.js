@@ -6,19 +6,24 @@ let minute = minuteTravail;
 let seconde = secondeTravail;
 let enPause = false;
 let IDInterval = 0;
+let estActif = false;
 
 const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
-const boutonReinitialiser = document.getElementById("arretBouton");
 
 boutonLancer.addEventListener('click', () => {
-    IDInterval = setInterval(decompte, 1000);
-});
+    if (!estActif) {
+        IDInterval = setInterval(decompte, 1000);
+        estActif = true;
+        boutonLancer.textContent = "ZA WARUDO";
+    } else {
+        clearInterval(IDInterval);
+        affichage(minuteTravail, secondeTravail);
+        enPause = false;
+        estActif = false;
+        boutonLancer.textContent = "Link Start";
+    }
 
-boutonReinitialiser.addEventListener('click', () => {
-    clearInterval(IDInterval);
-    affichage(minuteTravail, secondeTravail);
-    enPause = false;
 });
 
 function affichage(minute, seconde) {

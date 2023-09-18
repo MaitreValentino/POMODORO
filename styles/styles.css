@@ -1,0 +1,23 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+.displayFlex {
+    display: flex;
+    justify-content: center;
+}
+
+#minuteur {
+    flex-direction: column;
+    margin: 50px;
+}
+
+#temps {
+    font-size: 3em;
+}

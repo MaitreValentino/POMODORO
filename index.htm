@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/styles.css" />
-        <title>Pomodoro</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Pomodoro</title>
+</head>
 
-    <body>
+<body>
+    <header>
+        <section>
+            <h1 class="displayFlex">Pomodoro</h1>
+        </section>
+    </header>
+    <main>
+        <section class="displayFlex">
+            <div class="displayFlex" id="statut">
+                <button class="statut" id="etude">Etude</button>
+                <button class="statut" id="pause">Pause</button>
+            </div>
+        </section>
+        <section class="displayFlex" id="minuteur">
+            <div class="displayFlex" id="temps"></div>
+            <button class="statut" id="lancerBouton">Link Start</button>
+        </section>
+    </main>
 
-        <main>
-            <div id="temps"></div>
-    
-            <button id="lancerBouton">Link Start</button>
-            <button id="arretBouton">ZA WARUDO</button>
-        </main>
-
-        <script src="scripts/app.js"></script>
-    </body>
+    <script src="scripts/app.js"></script>
+</body>
 
 </html>
