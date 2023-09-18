@@ -13,6 +13,19 @@ h1 {
     justify-content: center;
 }
 
+#statut {
+    width: 20%;
+    border: solid black 3px;
+    border-radius: 6px;
+}
+
+.statut {
+    border: none;
+    font-size: 2em;
+    margin: 10px;
+    background-color: transparent;
+}
+
 #minuteur {
     flex-direction: column;
     margin: 50px;
