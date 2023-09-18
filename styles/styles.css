@@ -34,3 +34,9 @@ h1 {
 #temps {
     font-size: 3em;
 }
+
+@media screen and (min-width:720px) {
+    #statut {
+        width: 40%;
+    }
+}
