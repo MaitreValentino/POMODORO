@@ -8,6 +8,10 @@ h1 {
     font-size: 4em;
 }
 
+.theme {
+    width: 5em;
+}
+
 .displayFlex {
     display: flex;
     justify-content: center;
@@ -39,6 +43,39 @@ h1 {
     height: 20vw;
     align-items: center;
 }
+
+#lancerBouton {
+    margin-top: 25px;
+}
+
+.disabled {
+    color: rgba(135, 135, 140, 0.482);
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    #statut {
+        width: 80%;
+    }
+
+    #temps {
+        font-size: 3.2em;
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    #statut {
+        width: 60%;
+    }
+
+    #temps {
+        font-size: 3.2em;
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
 
 @media screen and (min-width:720px) and (max-width: 1080px) {
     #statut {
