@@ -1,7 +1,7 @@
-let minuteTravail = 0;
-let secondeTravail = 5;
-let minutePause = 0;
-let secondePause = 5;
+let minuteTravail = 25;
+let secondeTravail = 0;
+let minutePause = 5;
+let secondePause = 0;
 let minute = minuteTravail;
 let seconde = secondeTravail;
 let enPause = false;
@@ -28,19 +28,6 @@ boutonLancer.addEventListener('click', () => {
         boutonLancer.textContent = "Démarrer";
     }
 
-});
-
-minuteur.addEventListener('mouseover', () => {
-    if (estActif) {
-        temps.classList.add("notAllowed");
-    } else {
-        minuteur.addEventListener('click', () => {
-            openPopup();
-            popupBouton.addEventListener('click', () => {
-                closePopup();
-            })
-        });
-    }
 });
 
 function affichage(minute, seconde) {
@@ -78,3 +65,21 @@ function openPopup() {
 function closePopup() {
     popup.classList.remove("open-popup");
 }
+
+let modifEtude = document.getElementById("modifTravaille");
+let modifPause = document.getElementById("modifPause");
+
+minuteur.addEventListener('mouseover', () => {
+    if (estActif) {
+        temps.classList.add("notAllowed");
+    } else {
+        temps.classList.remove("notAllowed");
+        minuteur.addEventListener('click', () => {
+            openPopup();
+            popupBouton.addEventListener('click', () => {
+                modifPause.value
+                closePopup();
+            })
+        });
+    }
+});
