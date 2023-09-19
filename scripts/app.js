@@ -12,20 +12,35 @@ const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
 const etude = document.getElementById("etude");
 const pause = document.getElementById("pause");
+const popup = document.getElementById("popup");
+const popupBouton = document.getElementById("closePopup");
 
 boutonLancer.addEventListener('click', () => {
     if (!estActif) {
         IDInterval = setInterval(decompte, 1000);
         estActif = true;
-        boutonLancer.textContent = "ZA WARUDO";
+        boutonLancer.textContent = "Arrêter";
     } else {
         clearInterval(IDInterval);
         affichage(minuteTravail, secondeTravail);
         enPause = false;
         estActif = false;
-        boutonLancer.textContent = "Link Start";
+        boutonLancer.textContent = "Démarrer";
     }
 
+});
+
+minuteur.addEventListener('mouseover', () => {
+    if (estActif) {
+        temps.classList.add("notAllowed");
+    } else {
+        minuteur.addEventListener('click', () => {
+            openPopup();
+            popupBouton.addEventListener('click', () => {
+                closePopup();
+            })
+        });
+    }
 });
 
 function affichage(minute, seconde) {
@@ -54,4 +69,12 @@ function decompte() {
     } else {
         seconde--;
     }
+}
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
 }
