@@ -12,8 +12,6 @@ const minuteur = document.getElementById("temps");
 const boutonLancer = document.getElementById("lancerBouton");
 const etude = document.getElementById("etude");
 const pause = document.getElementById("pause");
-const popup = document.getElementById("popup");
-const popupBouton = document.getElementById("closePopup");
 
 boutonLancer.addEventListener('click', () => {
     if (!estActif) {
@@ -33,13 +31,6 @@ boutonLancer.addEventListener('click', () => {
 minuteur.addEventListener('mouseover', () => {
     if (estActif) {
         temps.classList.add("notAllowed");
-    } else {
-        minuteur.addEventListener('click', () => {
-            openPopup();
-            popupBouton.addEventListener('click', () => {
-                closePopup();
-            })
-        });
     }
 });
 
@@ -69,12 +60,4 @@ function decompte() {
     } else {
         seconde--;
     }
-}
-
-function openPopup() {
-    popup.classList.add("open-popup");
-}
-
-function closePopup() {
-    popup.classList.remove("open-popup");
 }
