@@ -13,4 +13,8 @@ Vous pouvez savoir à quel moment du travail vous êtes grâce à la barre d'ét
 2. Ouvrez le fichier `index.htm` dans votre navigateur web favori.
 3. Cliquer sur "Démarrer" et votre Pomodoro est lancé !
 
+##Auteur
+- Valentin SNITH
+
+Si vous avez des questions ou des commentaires sur quoique ce soit, n'hésitez pas à me contacter !
 Bonne utilisation du Pomodoro :D
