@@ -28,6 +28,7 @@ h1 {
 
 .notAllowed {
     cursor: not-allowed;
+    /* Permet à l'utilisateur de voir qu'on ne peut pas modifier ou cliquer sur cet endroit*/
 }
 
 #minuteur {
@@ -56,6 +57,7 @@ h1 {
     color: rgba(135, 135, 140, 0.482);
 }
 
+/*Ces lignes suivantes permet d'adapter la taille du Pomodoro en fonction de l'appareil utilisé*/
 @media screen and (min-width: 360px) and (max-width: 480px) {
     #statut {
         width: 80%;

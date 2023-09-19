@@ -46,8 +46,8 @@ affichage(minute, seconde);
 
 function decompte() {
     affichage(minute, seconde);
-    enPause ? etude.classList.add('disabled') : etude.classList.remove('disabled');
-    enPause ? pause.classList.remove('disabled') : pause.classList.add('disabled');
+    enPause ? etude.classList.add('disabled') : etude.classList.remove('disabled'); //Permet au bouton étude d'être grisé en cas de pause, sinon est mis en évidence
+    enPause ? pause.classList.remove('disabled') : pause.classList.add('disabled'); //Permet au bouton pause d'être mis en évidence en cas de pause, sinon est grisé
     if (seconde == 0) {
         if (minute == 0) {
             minute = enPause ? minuteTravail : minutePause;
